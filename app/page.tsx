@@ -36,7 +36,7 @@ function UploadIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true"><path
 export default function Home() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [stage, setStage] = useState<Stage>("input");
-  const [provider, setProvider] = useState<Provider>("openai"); const [model, setModel] = useState(PROVIDERS.openai.model);
+  const [provider, setProvider] = useState<Provider>("openai"); const [model, setModel] = useState<string>(PROVIDERS.openai.model);
   const [apiKey, setApiKey] = useState(""); const [file, setFile] = useState<File | null>(null); const [transcript, setTranscript] = useState("");
   const [summaryStyle, setSummaryStyle] = useState<SummaryStyle>("action"); const [summaryLength, setSummaryLength] = useState<SummaryLength>("standard");
   const [dragging, setDragging] = useState(false); const [loading, setLoading] = useState(false); const [result, setResult] = useState(""); const [error, setError] = useState(""); const [notice, setNotice] = useState(""); const [copied, setCopied] = useState(false);
